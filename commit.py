@@ -13,3 +13,4 @@ class Commit(ABC):
 
     def log(self):
        ...
+       
