@@ -21,8 +21,8 @@ class Delete(Change):
     def __init__(self):
         super().__init__(None)
     def validate_content(self):
-        if self.content is not None:
-            raise ValueError("kontent ne sme da bude None")
+        if not isinstance(self.content, str):
+            raise ValueError("mora da bude string") 
 
 class Modifikacija(Change):
     def __init__(self, content):
