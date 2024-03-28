@@ -22,7 +22,7 @@ class CodeCommit(Commit):
         print('\n'.join(differences))
 
 def load_from_commit(commit_id):
-    raise NotImplementedError("Implement this function to load data from a commit.")
+    raise NotImplementedError("nije implementirano")
    
 
 
