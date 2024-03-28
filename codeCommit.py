@@ -15,4 +15,7 @@ class CodeCommit(Commit):
         print("Changes:")
         for change in self.changes:
             print(change)
+
+            
+
    
