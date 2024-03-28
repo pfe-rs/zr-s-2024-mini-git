@@ -1,16 +1,11 @@
-from abc import ABC, abstractmethod
+from abc import ABC, abstractclassmethod
 
 class Commit(ABC):
 
-    @abstractmethod
-    def __init__(self, commit_name, parent=None):
-        self.commit_name = commit_name
-        self.parent_id = parent
-        self.changes = []
-
+    @abstractclassmethod
     def add_change(self, change):
        ...
 
+    @abstractclassmethod
     def log(self):
        ...
-       
