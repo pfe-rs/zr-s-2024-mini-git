@@ -4,7 +4,7 @@ class Graph():
     def move_head(self, new_head):
         if new_head in self.nodes:
             self.head = new_head
-            
+       
         else:
          return
  
