@@ -6,7 +6,7 @@ class Graph():
             self.head = new_head
             
         else:
-            print(f"Čvor {new_head} ne postoji u grafu.")
+         return
  
     def move_head_relative(self, delta):
         if self.head is None:
@@ -18,6 +18,6 @@ class Graph():
         if 0 <= new_index < len(self.nodes):
             new_head = list(self.nodes.keys())[new_index]
             self.head = new_head
-            print(f"HEAD je pomeren za {delta} čvorova. Novi HEAD je na čvoru {new_head}.")
+            return
         else:
-            print("Nije moguce pomeranje van granica grafa.")
+            return
