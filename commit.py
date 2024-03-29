@@ -7,5 +7,5 @@ class Commit(ABC):
        ...
 
     @abstractclassmethod
-    def log(self):
+    def logCommit(self):
        ...

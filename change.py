@@ -12,7 +12,9 @@ class Change:
 
 class Add(Change):
     def __init__(self, content):
-        super().__init__(content) #ovo ne treba jer nasledjuje i ne menja nista
+        super().__init__(content) #ovo ne treba jer nasledjuje i ne menja nista 
+    def __str__(self):
+        return "+: "+self.content
     def validate_content(self):
         if not isinstance(self.content, str):
             raise ValueError("mora da bude string")             #ne mogu ti karakteri?
