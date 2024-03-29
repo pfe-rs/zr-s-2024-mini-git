@@ -8,6 +8,15 @@ class Graph():
         else:
          return
  
+    def move_head(self, new_head):
+        try:
+            if new_head not in self.nodes:
+                raise ValueError(f"Čvor {new_head} ne postoji u grafu.")
+
+            self.head = new_head
+        except ValueError as e:
+            print(e)
+
     def move_head_relative(self, delta):
         if self.head is None:
             return
