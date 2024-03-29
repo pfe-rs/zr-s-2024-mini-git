@@ -7,11 +7,6 @@ class Graph():
             
         else:
             print(f"Čvor {new_head} ne postoji u grafu.")
-
-    def move_head_command(self):
-        new_head = input("Unesite ime čvora na koji želite da pomerite HEAD: ")
-        self.move_head(new_head)
-        print(f"HEAD je sada pomeren na čvor {new_head}.")
  
     def move_head_relative(self, delta):
         if self.head is None:
