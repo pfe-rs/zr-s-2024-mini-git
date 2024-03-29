@@ -15,7 +15,7 @@ class Graph():
 
             self.head = new_head
         except ValueError as e:
-            print(e)
+            ...
 
     def move_head_relative(self, delta):
         if self.head is None:
