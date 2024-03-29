@@ -12,6 +12,7 @@ class Management():
 
     def addCommit(self, commit): #dodaje commmit u graf
         self.commits.append(commit)
+        self.commits[commit.parent_id].children_id.append(commit.commit_name) #omogucava dodavanje vise dece
 
     def setHead(self, commit_id): #setuje head na odredjeni commit, ako taj commit id postoji
         

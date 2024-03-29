@@ -1,0 +1,7 @@
+[
+  "test.py::testAddChange[change0]",
+  "test.py::testValidateContent[0]",
+  "test.py::testValidateContent[test]",
+  "test_coomit_change.py::testAddChange[change0]",
+  "test_coomit_change.py::testValidateContent[0]"
+]
