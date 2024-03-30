@@ -12,12 +12,14 @@ class Management():
 
     def addCommit(self, commit): #dodaje commmit u graf
         self.commits.append(commit)
+        self.head = commit
+        self.commits[commit.parent_id].children_id.append(commit.commit_name) #omogucava dodavanje vise dece
 
     def setHead(self, commit_id): #setuje head na odredjeni commit, ako taj commit id postoji
         
         for commit in self.commits:
             if commit_id == commit.commit_name:  # ovo nece da izbaci gresku
-                self.head = commit_id
+                self.head = self.commits[commit_id]
             return True
         raise ValueError("ne postoji head sa tim commit_id")  
         
@@ -30,11 +32,3 @@ class Management():
         for commit in self.commits:
             commit.logCommit()
 
-commit = CodeCommit(0)
-commit.add_change(Add('linija'))
-projekat = Management(commit)
-
-projekat.setHead(7)
-
-
-projekat.log()

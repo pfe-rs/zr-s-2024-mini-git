@@ -6,6 +6,7 @@ class CodeCommit(Commit):
     def __init__(self, commit_name, parent=None): 
         self.commit_name = commit_name
         self.parent_id = parent
+        self.children_id = []
         self.changes = []
 
     def get_changes(self):
