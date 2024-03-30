@@ -12,7 +12,11 @@ class Change:
 
 class Add(Change):
     def __init__(self, content):
-        super().__init__(content) #ovo ne treba jer nasledjuje i ne menja nista
+        super().__init__(content) #ovo ne treba jer nasledjuje i ne menja nista 
+
+    def __str__(self):
+        return "+: "+self.content
+    
     def validate_content(self):
         if not isinstance(self.content, str):
             raise ValueError("mora da bude string")             #ne mogu ti karakteri?
@@ -20,6 +24,10 @@ class Add(Change):
 class Delete(Change):
     def __init__(self):
         super().__init__(None)
+
+    def __str__(self):
+        return "-: "+self.content
+
     def validate_content(self):
         if not isinstance(self.content, str):
             raise ValueError("mora da bude string") 
@@ -27,7 +35,12 @@ class Delete(Change):
 class Modifikacija(Change):
     def __init__(self, content):
         super().__init__(content)
+
+    def __str__(self):
+        return "M: "+self.content
+
     def validate_content(self):
+        print(type(self.content))
         if not isinstance(self.content, str):
             raise ValueError("kontent mora da bude string")
 
